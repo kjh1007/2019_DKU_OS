@@ -34,6 +34,23 @@
  */
 
 int main(int argc, char *argv[]){
-
+int choice=10;
+struct process* pros;
+while(choice != 5)
+{
+	pros = makeprocess();
+	printf("실행시킬 스케쥴링을 선택하세요\n");
+	printf("(1. FIFO  2. RR  3. MLFQ  4. Lottery  5. End)");
+	scanf("%d", &choice);
+	switch(choice)
+	{
+		case 1:FIFO(pros);break;
+		case 2:RR(pros);break;
+		case 3:MLFQ(pros);break;
+		case 4:Lot();break;
+	}
+}
+free(pros);
+	return 0;
 }
 
