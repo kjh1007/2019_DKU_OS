@@ -1,8 +1,8 @@
 /*
 *	DKU Operating System Lab
 *	    Lab1 (Scheduler Algorithm Simulator)
-*	    Student id : 
-*	    Student name : 
+*	    Student id : 32131960, 32131841
+*	    Student name : 김성현, 김준환
 *
 *   lab1_sched.c :
 *       - Lab1 source file.
@@ -351,8 +351,14 @@ void Lot()
 		else if(i % 5 == 0)
 			printf(" ");
 	}
-	printf("\n시행비율\n");
-	printf("A : %.2lf, B : %.2lf, C : %.2lf, D : %.2lf, E : %.2lf\n", rat[0], rat[1], rat[2], rat[3], rat[4]);
-	printf("\n시행횟수\n");
-	printf("A : %d, B : %d, C : %d, D : %d, E : %d\n", count[0], count[1], count[2], count[3], count[4]);
+	printf("\n총 시행횟수 : %d", sim);
+	printf("\n예상시행비율\n");
+	printf("A : %.2lf, B : %.2lf, C : %.2lf, D : %.2lf, E : %.2lf\n",
+			rat[0], rat[1], rat[2], rat[3], rat[4]);
+	printf("\n각 시행횟수\n");
+	printf("A : %d, B : %d, C : %d, D : %d, E : %d\n",
+			count[0], count[1], count[2], count[3], count[4]);
+	printf("\n실제시행비율\n");
+	printf("A : %.2lf, B : %.2lf, C : %.2lf, D : %.2lf, E : %.2lf\n",
+			(double)count[0] / sim, (double)count[1] / sim, (double)count[2] / sim, (double)count[3] / sim, (double)count[4] / sim);
 }
